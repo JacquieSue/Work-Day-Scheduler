@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/js/script.js">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <title>Work Day Scheduler</title>
+</head>
+
+<body>
+  <header class="jumbotron">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <!-- Timeblocks go here -->
+    <!-- <input class="form-control" id="datepicker" autocomplete="off" /> -->
+    <span id="date-display">Monday, October 17th</span>
+    </div>
+  </header>
+
+  <main>
+    <!-- <ul> -->
+    <!-- <li> -->
+      <div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="position: absolute; top: 242.398px; left: 32px; z-index: 1; display: block;"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a><div class="ui-datepicker-title"><select class="ui-datepicker-month" data-handler="selectMonth" data-event="change"><option value="0">Jan</option><option value="1">Feb</option><option value="2">Mar</option><option value="3">Apr</option><option value="4">May</option><option value="5">Jun</option><option value="6">Jul</option><option value="7">Aug</option><option value="8">Sep</option><option value="9" selected="selected">Oct</option><option value="10">Nov</option><option value="11">Dec</option></select><select class="ui-datepicker-year" data-handler="selectYear" data-event="change"><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022" selected="selected">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option><option value="2028">2028</option><option value="2029">2029</option><option value="2030">2030</option><option value="2031">2031</option><option value="2032">2032</option></select></div></div><table class="ui-datepicker-calendar"><thead><tr><th scope="col" class="ui-datepicker-week-end"><span title="Sunday">Su</span></th><th scope="col"><span title="Monday">Mo</span></th><th scope="col"><span title="Tuesday">Tu</span></th><th scope="col"><span title="Wednesday">We</span></th><th scope="col"><span title="Thursday">Th</span></th><th scope="col"><span title="Friday">Fr</span></th><th scope="col" class="ui-datepicker-week-end"><span title="Saturday">Sa</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">1</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">2</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">3</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">4</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">5</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">6</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">7</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">8</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">9</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">10</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">11</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">12</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">13</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">14</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">15</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">16</a></td><td class=" ui-datepicker-days-cell-over  ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default ui-state-highlight ui-state-hover" href="#">17</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">18</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">19</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">20</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">21</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">22</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">23</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">24</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">25</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">26</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">27</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">28</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">29</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">30</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">31</a></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div>
+    <div class="container text-area">
+      <tbody id="event-display">
+          <section class="col-12 col-sm-6">
+            <table class="table table-bordered custom-table">
+                <label for="time-of-event" style = "border: dotted">12AM</label>
+                <input type="text" class="text-input" name="event-name" style ="background-color: rgb(252, 252, 184)"/>
+                <button class="btn btn-info">💾</button>
+              </table>
+            </div>
+          </section>
+        </tbody>
+      </div>
+    </div>
+    </li>
+
+    <!-- <li> -->
+    <div class="container text-area">
+      <tbody id="event-display">
+          <section class="col-12 col-sm-6">
+            <table class="table table-bordered custom-table">
+                <label for="time-of-event" style = "border: dotted">1AM</label>
+                <input type="text" class="text-input" name="event-name" style ="background-color: rgb(252, 252, 184)"/>
+                <button class="btn btn-info">💾</button>
+              </table>
+            </div>
+          </section>
+        </tbody>
+      </div>
+    </div>
+    </li>
+
+
+    <!-- <li> -->
+    <div class="container text-area">
+      <tbody id="event-display">
+          <section class="col-12 col-sm-6">
+            <table class="table table-bordered custom-table">
+                <label for="time-of-event" style = "border: dotted">2AM</label>
+                <input type="text" class="text-input" name="event-name" style ="background-color: rgb(252, 252, 184)"/>
+                <button class="btn btn-info">💾</button>
+              </table>
+            </div>
+          </section>
+        </tbody>
+      </div>
+    </div>
+    </li>
+
+    <!-- <li> -->
+    <div class="container text-area">
+       <tbody id="event-display">
+          <section class="col-12 col-sm-6">
+            <table class="table table-bordered custom-table">
+                <label for="time-of-event" style = "border: dotted">3AM</label>
+                <input type="text" class="text-input" name="event-name" style ="background-color: rgb(252, 252, 184)"/>
+                <button class="btn btn-info">💾</button>
+              </table>
+            </div>
+          </section>
+        </tbody>
+      </div>
+    </div>
+    </li>
+
+    <!-- <li> -->
+    <div class="container text-area">
+      <tbody id="event-display">
+          <section class="col-12 col-sm-6">
+            <table class="table table-bordered custom-table">
+                <label for="time-of-event" style = "border: dotted">4AM</label>
+                <input type="text" class="text-input" name="event-name" style ="background-color: rgb(252, 252, 184)"/>
+                <button class="btn btn-info">💾</button>
+              </table>
+            </div>
+          </section>
+        </tbody>
+      </div>
+    </div>
+    </li>
+
+    <!-- <li> -->
+    <div class="container text-area">
+      <tbody id="event-display">
+          <section class="col-12 col-sm-6">
+            <table class="table table-bordered custom-table">
+                <label for="time-of-event" style = "border: dotted">5AM</label>
+                <input type="text" class="text-input" name="event-name" style ="background-color: rgb(252, 252, 184)"/>
+                <button class="btn btn-info">💾</button>
+              </table>
+            </div>
+          </section>
+        </tbody>
+      </div>
+    </div>
+    </li>
+
+    <!-- <li> -->
+    <div class="container text-area">
+      <tbody id="event-display">
+          <section class="col-12 col-sm-6">
+            <table class="table table-bordered custom-table">
+                <label for="time-of-event" style = "border: dotted">6AM</label>
+                <input type="text" class="text-input" name="event-name" style ="background-color: rgb(252, 252, 184)"/>
+                <button class="btn btn-info">💾</button>
+              </table>
+            </div>
+          </section>
+        </tbody>
+      </div>
+    </div>
+    </li>
+
+    <!-- <li> -->
+    <div class="container text-area">
+      <tbody id="event-display">
+          <section class="col-12 col-sm-6">
+            <table class="table table-bordered custom-table">
+                <label for="time-of-event" style = "border: dotted">7AM</label>
+                <input type="text" class="text-input" name="event-name" style ="background-color: rgb(252, 252, 184)"/>
+                <button class="btn btn-info">💾</button>
+              </table>
+            </div>
+          </section>
+        </tbody>
+      </div>
+    </div>
+    </li>
+
+    <!-- <li> -->
+    <div class="container text-area">
+      <tbody id="event-display">
+          <section class="col-12 col-sm-6">
+            <table class="table table-bordered custom-table">
+                <label for="time-of-event" style = "border: dotted">8AM</label>
+                <input type="text" class="text-input" name="event-name" style ="background-color: rgb(252, 252, 184)"/>
+                <button class="btn btn-info">💾</button>
+              </table>
+            </div>
+          </section>
+        </tbody>
+      </div>
+    </div>
+    </li>
+
+    <!-- <li> -->
+    <div class="container text-area">
+      <tbody id="event-display">
+          <section class="col-12 col-sm-6">
+            <table class="table table-bordered custom-table">
+                <label for="time-of-event" style = "border: dotted">9AM</label>
+                <input type="text" class="text-input" name="event-name" style="background-color:rgb(186, 167, 213)"/>
+                <button class="btn btn-info">💾</button>
+              </table>
+            </div>
+          </section>
+        </tbody>
+      </div>
+    </div>
+    </li>
+
+    <!-- <li> -->
+    <div class="container text-area">
+      <tbody id="event-display">
+          <section class="col-12 col-sm-6">
+            <table class="table table-bordered custom-table">
+                <label for="time-of-event" style = "border: dotted">10AM</label>
+                <input type="text" class="text-input" name="event-name" style="background-color:rgb(186, 167, 213)" />
+                <button class="btn btn-info">💾</button>
+              </table>
+            </div>
+          </section>
+        </tbody>
+      </div>
+    </div>
+    </li>
+
+    <!-- <li> -->
+    <div class="container text-area">
+      <tbody id="event-display">
+          <section class="col-12 col-sm-6">
+            <table class="table table-bordered custom-table">
+                <label for="time-of-event" style = "border: dotted">11AM</label>
+                <input type="text" class="text-input" name="event-name" style="background-color:rgb(186, 167, 213)"/>
+                <button class="btn btn-info">💾</button>
+              </table>
+            </div>
+          </section>
+        </tbody>
+      </div>
+    </div>
+    </li>
+
+    <!-- <li> -->
+    <div class="container text-area">
+      <tbody id="event-display">
+          <section class="col-12 col-sm-6">
+            <table class="table table-bordered custom-table">
+                <label for="time-of-event" style = "border: dotted">12PM</label>
+                <input type="text" class="text-input" name="event-name" style="background-color:rgb(186, 167, 213)"/>
+                <button class="btn btn-info">💾</button>
+              </table>
+            </div>
+          </section>
+        </tbody>
+      </div>
+    </div>
+    </li>
+
+    <!-- <li> -->
+    <div class="container text-area">
+      <tbody id="event-display">
+          <section class="col-12 col-sm-6">
+            <table class="table table-bordered custom-table">
+                <label for="time-of-event" style = "border: dotted">1PM</label>
+                <input type="text" class="text-input" name="event-name" style="background-color:rgb(186, 167, 213)"/>
+                <button class="btn btn-info">💾</button>
+              </table>
+            </div>
+          </section>
+        </tbody>
+      </div>
+    </div>
+    </li>
+
+    <!-- <li> -->
+    <div class="container text-area">
+      <tbody id="event-display">
+          <section class="col-12 col-sm-6">
+             <table class="table table-bordered custom-table">
+                <label for="time-of-event" style = "border: dotted">2PM</label>
+                <input type="text" class="text-input" name="event-name" style="background-color:rgb(186, 167, 213)"/>
+                <button class="btn btn-info">💾</button>
+              </table>
+            </div>
+          </section>
+        </tbody>
+      </div>
+    </div>
+    </li>
+
+    <!-- <li> -->
+    <div class="container text-area">
+      <tbody id="event-display">
+          <section class="col-12 col-sm-6">
+            <table class="table table-bordered custom-table">
+                <label for="time-of-event" style = "border: dotted">3PM</label>
+                <input type="text" class="text-input" name="event-name" style="background-color:rgb(186, 167, 213)"/>
+                <button class="btn btn-info">💾</button>
+              </table>
+            </div>
+          </section>
+        </tbody>
+      </div>
+    </div>
+    </li>
+
+    <!-- <li> -->
+    <div class="container text-area">
+      <tbody id="event-display">
+          <section class="col-12 col-sm-6">
+            <table class="table table-bordered custom-table">
+                <label for="time-of-event" style = "border: dotted">4PM</label>
+                <input type="text" class="text-input" name="event-name" style="background-color:rgb(186, 167, 213)"/>
+                <button class="btn btn-info">💾</button>
+              </table>
+            </div>
+          </section>
+        </tbody>
+      </div>
+    </div>
+    </li>
+
+    <!-- <li> -->
+    <div class="container text-area">
+      <tbody id="event-display">
+          <section class="col-12 col-sm-6">
+            <table class="table table-bordered custom-table">
+                <label for="time-of-event" style = "border: dotted">5PM</label>
+                <input type="text" class="text-input" name="event-name" style="background-color:rgb(186, 167, 213)"/>
+                <button class="btn btn-info">💾</button>
+              </table>
+            </div>
+          </section>
+        </tbody>
+      </div>
+    </div>
+    </li>
+
+    <!-- <li> -->
+    <div class="container text-area">
+      <tbody id="event-display">
+          <section class="col-12 col-sm-6">
+            <table class="table table-bordered custom-table">
+                <label for="time-of-event" style = "border: dotted">6PM</label>
+                <input type="text" class="text-input" name="event-name" style ="background-color: rgb(126, 242, 192)"/>
+                <button class="btn btn-info">💾</button>
+              </table>
+            </div>
+          </section>
+        </tbody>
+      </div>
+    </div>
+    </li>
+
+    <!-- <li> -->
+    <div class="container text-area">
+      <tbody id="event-display">
+          <section class="col-12 col-sm-6">
+            <table class="table table-bordered custom-table">
+                <label for="time-of-event" style = "border: dotted">7PM</label>
+                <input type="text" class="text-input" name="event-name" style ="background-color: rgb(126, 242, 192)"/>
+                <button class="btn btn-info">💾</button>
+              </table>
+            </div>
+          </section>
+        </tbody>
+      </div>
+    </div>
+    </li>
+
+    <!-- <li> -->
+    <div class="container text-area">
+    <tbody id="event-display">
+          <section class="col-12 col-sm-6">
+            <table class="table table-bordered custom-table">
+                <label for="time-of-event" style = "border: dotted">8PM</label>
+                <input type="text" class="text-input" name="event-name" style ="background-color: rgb(126, 242, 192)"/>
+                <button class="btn btn-info">💾</button>
+              </table>
+            </div>
+          </section>
+        </tbody>
+      </div>
+    </div>
+    </li>
+
+    <!-- <li> -->
+    <div class="container text-area">
+      <tbody id="event-display">
+          <section class="col-12 col-sm-6">
+            <table class="table table-bordered custom-table">
+                <label for="time-of-event" style = "border: dotted">9PM</label>
+                <input type="text" class="text-input" name="event-name" style ="background-color: rgb(126, 242, 192)"/>
+                <button class="btn btn-info">💾</button>
+              </table>
+            </div>
+          </section>
+        </tbody>
+      </div>
+    </div>
+    </li>
+
+    <!-- <li> -->
+    <div class="container text-area">
+      <tbody id="event-display">
+          <section class="col-12 col-sm-6">
+            <table class="table table-bordered custom-table">
+                <label for="time-of-event" style = "border: dotted">10PM</label>
+                <input type="text" class="text-input" name="event-name" style ="background-color: rgb(126, 242, 192)"/>
+                <button class="btn btn-info">💾</button>
+              </table>
+            </div>
+          </section>
+        </tbody>
+      </div>
+    </div>
+    </li>
+
+    <!-- <li> -->
+    <div class="container text-area">
+      <tbody id="event-display">
+          <section class="col-12 col-sm-6">
+            <table class="table table-bordered custom-table">
+                <label for="time-of-event" style = "border: dotted">11PM</label>
+                <input type="text" class="text-input" name="event-name" style ="background-color: rgb(126, 242, 192)"/>
+                <button class="btn btn-info">💾</button>
+              </table>
+            </div>
+          </section>
+        </tbody>
+      </div>
+    </div>
+    </li>
+
+    <!-- <li> -->
+    <div class="container text-area">
+      <tbody id="event-display">
+          <section class="col-12 col-sm-6">
+            <table class="table table-bordered custom-table">
+                <label for="time-of-event" style = "border: dotted">12PM</label>
+                <input type="text" class="text-input" name="event-name" style ="background-color: rgb(126, 242, 192)"/>
+                <button class="btn btn-info">💾</button>
+              </table>
+            </div>
+          </section>
+        </tbody>
+      </div>
+    </div>
+    </li>
+    </ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </main>
+</body>
+
+</html>
